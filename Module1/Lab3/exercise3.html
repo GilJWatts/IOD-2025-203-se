@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1 Exercise 3</title>
+    <link rel="stylesheet" href="exercise3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="column1">
+        <h1 id="heading1">Hello</h1>
+        <img
+          src="https://silkcards.s3.amazonaws.com/productimages/pic_3_13_1681939044.jpg"
+          width="600"
+          height="400"
+          alt="intell ante"
+        />
+        <input type="text" id="text1" placeholder="Enter new heading text" />
+        <button class="button button1">Change Me!</button>
+      </div>
+      <div class="column" id="column2">
+        <h1 id="heading2">World</h1>
+        <input type="text" id="text2" placeholder="Enter new heading text" />
+        <img
+          src="https://silkcards.s3.amazonaws.com/productimages/pic_3_13_1681514454.jpg"
+          width="600"
+          height="400"
+          alt="intell ante"
+        />
+        <button class="button button2">Change Me!</button>
+      </div>
+    </div>
+
+    <script>
+      function changeColumn1() {
+        const column1 = document.getElementById("column1");
+        const heading1 = document.getElementById("heading1");
+        const text1 = document.getElementById("text1");
+
+        column1.style.backgroundColor = "lightblue";
+        heading1.textContent = text1.value;
+      }
+
+      function changeColumn2() {
+        const column2 = document.getElementById("column2");
+        const heading2 = document.getElementById("heading2");
+        const text2 = document.getElementById("text2");
+
+        column2.style.backgroundColor = "lightgreen";
+        heading2.textContent = text2.value;
+      }
+
+      document
+        .getElementById("button1")
+        .addEventListener("click", changeColumn1);
+      document
+        .getElementById("button2")
+        .addEventListener("click", changeColumn2);
+    </script>
+  </body>
+</html>
