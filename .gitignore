@@ -1,1 +1,11 @@
+# OS-specific Files
+.DS_Store
+
+#folders
 Lab8/
+
+# Log files
+*.log
+
+# Other temporary files
+*.tmp
