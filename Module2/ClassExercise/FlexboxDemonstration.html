@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Demonstration</title>
+    <style>
+      /*<!--adjust these styles to use flexbox and experiment with various property values -->*/
+
+      header {
+        background: black;
+        padding: 1em;
+        display: flex; /* Make header a flex container */
+        align-items: center; /* Vertically center items */
+        justify-content: space-between; /* Space items apart */
+      }
+      #logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #b200ff;
+      }
+      .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: yellow;
+        display: flex; /* Make the menu a flex container */
+        gap: 1em; /* Add space between menu items */
+      }
+      main {
+        max-width: 80%;
+        margin: 1em auto;
+      }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 18px;
+        display: flex; /* Make body a flex container */
+        flex-direction: column; /* Stack items vertically */
+        min-height: 100vh; /* Make body take up full viewport height */
+        justify-content: flex-start; /* Align items to the top */
+      }
+      .box {
+        border-radius: 1em;
+        min-width: 300px;
+        min-height: 300px;
+        border: 2px solid #404040;
+        background: #b2b2b2;
+        margin: 1em;
+      }
+      #boxes {
+        display: flex; /* Make #boxes a flex container */
+        flex-direction: row; /* Arrange items in a row */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- flex container #1 -->
+      <div id="logo"></div>
+      <nav id="main-menu">
+        <ul class="menu">
+          <!-- flex container #2-->
+          <li>Menu #1</li>
+          <li>Menu #2</li>
+          <li>Menu #3</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="boxes">
+        <!-- flex container #3 -->
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- this CodePen also demonstrates flexbox properties and usage: https://codepen.io/chriscoyier/pen/kNZRER -->

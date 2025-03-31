@@ -20,8 +20,3 @@ function diceRollAndUpdate() {
 function diceRoll(numberOfFaces) {
   return Math.floor(Math.random() * numberOfFaces) + 1;
 }
-
-module.exports = {
-  diceRoll,
-  diceRollAndUpdate,
-};
