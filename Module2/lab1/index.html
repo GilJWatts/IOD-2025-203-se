@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Lab1" />
+    <meta name="keywords" content="web Development, html, lab1" />
+    <meta name="author" content="Gil Watts" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1 Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--moved this to style.css
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      img {
+        width: 50%;
+        height: 300px;
+      }
+    </style>
+    -->
+  </head>
+
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="http://127.0.0.1:5500/Module2/lab1/index.html">Home</a>
+      <a href="http://127.0.0.1:5500/Module2/lab1/form.html">Form</a>
+    </nav>
+  </header>
+  <main>
+  <body>
+    <h1>My HTML learning journey</h1>
+    <article>
+      <h2>Learning elements - div, span, p, pre, ul, li, ol, article.</h2>
+      <!-- Block-level elements (divs) -->
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <!-- Inline elements (spans) -->
+      <span>Span 1</span>
+      <span>Span 2</span>
+      <span>Span 3</span>
+      <!--Paragraph and Preformatted Text-->
+      <p>p represents paragraph without preserving spacing</p>
+      <pre>
+        Text in         a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+        </pre
+      >
+      <!--Unordered List-->
+      <ul>
+        <li>Unordered Item 1</li>
+        <li>Unordered Item 2</li>
+        <li>Unordered Item 3</li>
+        <li>
+          Unordered Item 4
+          <!-- Nested List -->
+          <ul>
+            <li>Nested Item 1</li>
+            <li>Nested Item 2</li>
+          </ul>
+        </li>
+      </ul>
+      <!--Ordered List-->
+      <ol>
+        <li>Ordered Item 1</li>
+        <li>Ordered Item 2</li>
+        <li>
+          Ordered Item 3
+          <!-- Nested List -->
+          <ol>
+            <li>Nested Item 1</li>
+            <li>Nested Item 2</li>
+          </ol>
+        </li>
+      </ol>
+    </article>
+    <article>
+      <h2>Learning elements - Tables</h2>
+      <table>
+        <tr>
+          <th colspan="2">Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>test</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>test</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>test</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>test</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>test</td>
+          <td>Helen Bennett</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>test</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Magazzini Alimentari Riuniti</td>
+          <td>test</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+        </tr>
+        <tr>
+          <td>test</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <h2>Learning elements - Images</h2>
+      <img src="https://picsum.photos/600/300" alt="changing images" />
+      <img src="assets/html_lab_image.jpg" alt="sunset" />
+    </article>
+    <article>
+      <h2>Learning elements - Video</h2>
+      <video width="250" autoplay loop>
+        <!--Not sure why adding controls before autoplay would not autoplay the video, 
+          but adding it after would allow the video to autoplay-->
+        <source src="assets/flower.webm" type="video/webm" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </article>
+    <article>
+      <h2>Learning elements - Audio</h2>
+      <figure>
+        <audio autoplay loop controls>
+          <!-- added controls back in so that I would not have to continuously hear that roar. lol-->
+          <source src="assets/t-rex-roar.mp3" type="audio/mpeg" />
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+        <figcaption>A T-Rex Roaring</figcaption>
+      </figure>
+    </article>
+    </main>
+    <footer>Copyright &copy; 2025 Gil Watts. All rights reserved.</footer>
+  </body>
+</html>

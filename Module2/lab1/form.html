@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Page - Lab 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="http://127.0.0.1:5500/Module2/lab1/index.html">Home</a>
+        <a href="http://127.0.0.1:5500/Module2/lab1/form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <form method="POST" action="http://127.0.0.1:5500/form">
+        <div>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="e.g., John"
+            required
+          />
+        </div>
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="e.g., Wick"
+            required
+          />
+        </div>
+        <div>
+          <p>Select your favorite coding language:</p>
+          <input
+            type="radio"
+            id="JavaScript"
+            name="favoriteLanguage"
+            value="JavaScript"
+          />
+          <label for="JavaScript">JavaScript</label>
+          <input
+            type="radio"
+            id="Python"
+            name="favoriteLanguage"
+            value="Python"
+          />
+          <label for="Python">Python</label>
+          <input type="radio" id="Java" name="favoriteLanguage" value="Java" />
+          <label for="Java">Java</label>
+        </div>
+        <div>
+          <p>Type of vehicle you own:</p>
+          <input type="checkbox" id="car" name="vehicle" value="car" />
+          <label for="car">Car</label>
+          <input type="checkbox" id="SUV" name="SUV" value="SUV" />
+          <label for="SUV">SUV</label>
+          <input type="checkbox" id="truck" name="vehicle" value="truck" />
+          <label for="truck">Truck</label>
+        </div>
+        <div>
+          <label for="carBrand">Car Brand:</label>
+          <select id="carBrand" name="carBrand">
+            <option value="">Select a car brand</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="Tesla">Tesla</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Kia">Kia</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Subaru">Subaru</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Submit form</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>Copyright &copy; 2025</footer>
+  </body>
+</html>
