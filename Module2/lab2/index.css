@@ -1,0 +1,143 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
+#style-me2.style-me1 {
+  color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+  background-color: aquamarine;
+  margin: 10px 100px 30px 50px;
+  padding: 1em 10%;
+  /* box-sizing: border-box; */
+  /* box-sizing: content-box; */
+  overflow: visible; /* Default value, content overflows outside the box */
+  outline: 10px solid red;
+  background-image: url("./assets/images/img1.png");
+  background-size: cover;
+}
+.box:nth-child(2) {
+  width: 60px; /* Fixed width in pixels */
+  height: 2rem; /* Relative height based on font size */
+  border: 10px solid blue;
+  /* border: 10px groove purple; */
+  overflow: auto; /* Scrollbars are added only when needed */
+  border-radius: 50%;
+}
+.box:nth-child(3) {
+  width: 25vw; /* Relative width based on viewport width */
+  height: 30vh; /* Relative height based on viewport height */
+  border: 5px dotted green;
+  /* border: 10px inset gray; */
+  /* overflow: hidden; Content outside the box is clipped */
+  /* overflow: scroll; Scrollbars are added to view the content */
+  overflow: auto; /* Scrollbars are added only when needed */
+  border-radius: 5px;
+  background-position: center;
+}
+/* 
+.box:nth-child(3) {
+  width: 1000px;
+  height: 200px;
+}
+ */
+* .box:nth-child(4) {
+  width: 100px !important; /* Fixed width in pixels, !important to override inline style */
+  height: 100px !important; /* Fixed height in pixels, !important to override inline style */
+  border: 10px double orange;
+  /* border: 10px outset black; */
+  overflow: scroll; /* Scrollbars are added to view the content */
+  border-radius: 5em;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+/* not quite 100% sure I understand absolute positioning entirely */
+.position-absolute {
+  position: absolute;
+  top: 0;
+  background-color: red;
+  opacity: 0.5;
+}
+
+.position-relative {
+  position: relative;
+  background-color: rgba(0, 255, 0, 0.5);
+  opacity: 0.5;
+}
+
+/* not quite sure why this moved outside the article when it was inside before I added positioning */
+.position-sticky {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 255, 0.5);
+  padding: 20px;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+.text-style {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: red;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 600;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  text-decoration: underline blue;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+a,
+a:link {
+  color: blue;
+  text-decoration: none;
+  font-size: large;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+.calc-style {
+  width: 100vw-100px;
+  background-color: rgb(48, 78, 214);
+  overflow: auto;
+}
