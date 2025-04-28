@@ -22,5 +22,8 @@ class AlarmClock extends DigitalClock {
   }
 }
 
-const alarmClock = new AlarmClock("alarm clock:", "07:05");
-alarmClock.start();
+const defaultAlarm = new AlarmClock("default alarm:");
+defaultAlarm.start();
+
+const customAlarm = new AlarmClock("custom alarm:", "08:30");
+customAlarm.start();
