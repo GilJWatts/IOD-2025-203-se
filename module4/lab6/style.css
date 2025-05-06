@@ -1,0 +1,10 @@
+body {
+  background-color: #f8f9fa;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.card-text {
+  max-height: 100px;
+  overflow-y: auto;
+}

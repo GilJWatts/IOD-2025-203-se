@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Artist Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f0f0f0;
+        margin: 20px;
+      }
+      #artist-name {
+        color: #333;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 10px;
+      }
+      #portfolio-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .portfolio-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+      }
+      .portfolio-image {
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .portfolio-title {
+        font-weight: 600;
+        font-size: 1.1em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Element to display the artist's name -->
+    <h1 id="artist-name"></h1>
+
+    <!-- Container for the portfolio item cards -->
+    <div id="portfolio-list"></div>
+
+    <!-- Template for a single portfolio item -->
+    <template id="portfolio-item-template">
+      <div class="portfolio-card">
+        <img src="" alt="" class="portfolio-image" />
+        <div class="portfolio-title"></div>
+      </div>
+    </template>
+
+    <script>
+      // The artist data
+      const artist = {
+        name: "Van Gogh",
+        portfolio: [
+          {
+            title: "portrait",
+            url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+          },
+          {
+            title: "sky",
+            url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg",
+          },
+          {
+            title: "Starry Night",
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+          },
+          {
+            title: "Sunflowers",
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/800px-Vincent_Willem_van_Gogh_127.jpg",
+          },
+        ],
+      };
+
+      // Function to add a portfolio item card to the page
+      function addPortfolioItem(title, imageUrl) {
+        // 1. Get the template
+        const template = document
+          .getElementById("portfolio-item-template")
+          .content.cloneNode(true);
+
+        // 2. Populate the template
+        const imgElement = template.querySelector(".portfolio-image");
+        imgElement.src = imageUrl;
+        imgElement.alt = title; // Set alt text for accessibility
+
+        template.querySelector(".portfolio-title").innerText = title;
+
+        // 3. Append to the list
+        document.querySelector("#portfolio-list").appendChild(template);
+      }
+
+      // --- Main script execution ---
+
+      // 1. Set the artist's name
+      document.getElementById("artist-name").innerText = artist.name;
+
+      // 2. Loop through the portfolio and add each item
+      artist.portfolio.forEach((item) => {
+        addPortfolioItem(item.title, item.url);
+      });
+    </script>
+  </body>
+</html>
