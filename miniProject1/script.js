@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
       displayTasks(tasks);
     } catch (error) {
       console.error("Failed to fetch tasks:", error);
-      // Display an error message
     }
   }
 
@@ -68,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
           task.completed = updatedTask.completed; // Update the local task object
         } catch (error) {
           console.error("Failed to update task:", error);
-          // Display an error message
         }
       });
 
@@ -88,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
           listItem.remove(); // Remove the item from the DOM on successful deletion
         } catch (error) {
           console.error("Failed to delete task:", error);
-          // Display an error message
         }
       });
 
@@ -117,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fetchTasks(); // Re-fetch to ensure the list is up-to-date
       } catch (error) {
         console.error("Failed to add task:", error);
-        // Display an error message
       }
     }
   });

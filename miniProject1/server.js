@@ -2,12 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs").promises;
 const path = require("path");
-const cors = require("cors"); // Import the cors package
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
 const TASKS_FILE = path.join(__dirname, "tasks.json");
-app.use(cors()); // Enable CORS for all routes
+app.use(cors());
 
 const dataFilePath = path.join(__dirname, "tasks.json");
 

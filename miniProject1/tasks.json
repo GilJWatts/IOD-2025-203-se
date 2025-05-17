@@ -2,17 +2,17 @@
   {
     "id": 1747277917400,
     "text": "test",
-    "completed": false
+    "completed": true
   },
   {
     "id": 1747277921521,
     "text": "hello",
-    "completed": true
+    "completed": false
   },
   {
     "id": 1747487563903,
     "text": "world",
-    "completed": true
+    "completed": false
   },
   {
     "id": 1747489000014,

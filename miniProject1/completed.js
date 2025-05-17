@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       displayCompletedTasks(completedTasks);
     } catch (error) {
       console.error("Failed to fetch tasks:", error);
-      // Display an error message
     }
   }
 
