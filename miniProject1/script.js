@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const deleteButton = listItem.querySelector(".delete-btn");
       const taskSpan = listItem.querySelector(".task-text");
 
+      // function to mark as Complete
       completeButton.addEventListener("click", async function () {
         const taskId = parseInt(listItem.dataset.taskId);
         const newCompletedStatus = !task.completed;
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+      // function to delete
       deleteButton.addEventListener("click", async function () {
         const taskId = parseInt(listItem.dataset.taskId);
         try {
@@ -122,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Allow adding tasks by pressing Enter in the input field
   taskInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter"`) {
       addTaskButton.click();
     }
   });

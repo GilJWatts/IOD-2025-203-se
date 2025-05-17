@@ -47,7 +47,7 @@ app.post("/api/tasks", async (req, res) => {
   console.log("Request body:", req.body);
   if (text) {
     const tasks = await readTasks();
-    const newTask = { id: Date.now(), text: text, completed: false };
+    const newTask = { id: Date.now(), text: text, completed: false }; // use Date.now to generate unique id
     tasks.push(newTask);
     await writeTasks(tasks);
     res.status(201).json(newTask); // Respond with the newly created task and a 201 status
