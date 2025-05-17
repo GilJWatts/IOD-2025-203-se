@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const deleteButton = listItem.querySelector(".delete-btn");
       const taskSpan = listItem.querySelector(".task-text");
 
-      // function to mark as Complete
+      // Function to mark as Complete
       completeButton.addEventListener("click", async function () {
         const taskId = parseInt(listItem.dataset.taskId);
         const newCompletedStatus = !task.completed;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // function to delete
+      // Function to delete
       deleteButton.addEventListener("click", async function () {
         const taskId = parseInt(listItem.dataset.taskId);
         try {
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const newTask = await response.json();
-        displayTasks([newTask]); // Optimistically add the new task to the list
+        displayTasks([newTask]);
         taskInput.value = ""; // Clear the input field
         fetchTasks(); // Re-fetch to ensure the list is up-to-date
       } catch (error) {
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Allow adding tasks by pressing Enter in the input field
   taskInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter"`) {
+    if (event.key === "Enter") {
       addTaskButton.click();
     }
   });
