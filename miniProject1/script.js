@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
           listItem.classList.toggle(
             "task-item--completed",
             updatedTask.completed
-          ); // Toggle class on LI for background animation
+          );
           completeButton.textContent = updatedTask.completed
             ? "Undo"
             : "Complete";
-          task.completed = updatedTask.completed; // Update the local task object
+          task.completed = updatedTask.completed;
         } catch (error) {
           console.error("Failed to update task:", error);
         }
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-          listItem.remove(); // Remove the item from the DOM on successful deletion
+          listItem.remove();
         } catch (error) {
           console.error("Failed to delete task:", error);
         }
