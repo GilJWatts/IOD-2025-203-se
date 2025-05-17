@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live News Feed</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h1>Latest News</h1>
+
+    <form id="add-news-form">
+      <h2>Add a News Item</h2>
+      <div>
+        <label for="news-title-input">Title:</label>
+        <input type="text" id="news-title-input" name="title" required />
+      </div>
+      <div>
+        <label for="news-content-input">Content:</label>
+        <textarea
+          id="news-content-input"
+          name="content"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Add News</button>
+    </form>
+    <div id="news-container"></div>
+    <template id="news-item-template">
+      <div class="news-item">
+        <h2 class="news-title"></h2>
+        <p class="news-content"></p>
+      </div>
+    </template>
+  </body>
+  <script src="script2.js"></script>
+</html>
