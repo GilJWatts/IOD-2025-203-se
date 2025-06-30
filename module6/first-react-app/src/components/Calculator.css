@@ -1,0 +1,54 @@
+.calculator-container {
+  width: 320px;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.calculator-screen {
+  background-color: #222;
+  color: white;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.keypad-button {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  background-color: #efefef;
+  color: black;
+}
+
+.keypad-button:hover {
+  border-color: #646cff;
+}
+
+.operator-button {
+  background-color: #ff9500;
+  color: white;
+}
+
+.wide-button {
+  grid-column: span 2;
+}
+
+.tall-button {
+  grid-row: span 2;
+}
